@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.item {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 1rem;
+  min-width: 15rem;
+}
+
+.selected {}
