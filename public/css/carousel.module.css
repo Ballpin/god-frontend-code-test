@@ -1,7 +1,17 @@
 .container {
-  display: flex;
   background: #ffffff;
-  overflow: hidden;
+  position: relative;
+}
+
+.inner_container {
+  display: flex;
+  overflow: scroll;
+  padding-bottom: 3rem;
+  scrollbar-width: none;
+}
+
+.inner_container::-webkit-scrollbar {
+  display: none;
 }
 
 .item {
@@ -9,6 +19,29 @@
   margin-right: 0.5rem;
   padding: 1rem;
   min-width: 15rem;
+}
+
+.indicator_container {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.indicator {
+  cursor:pointer;
+  color: #dddddd;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  background: none;
+  box-shadow: none;
+  border: none;
+}
+
+.indicator:hover {
+  color: #333333;
 }
 
 .selected {}

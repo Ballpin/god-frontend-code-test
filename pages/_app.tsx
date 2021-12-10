@@ -1,11 +1,11 @@
 import DefaultLayout from "@/layouts/default";
 import Carousel from "@components/carousel/Carousel";
-import React, { useEffect, useState } from "react";
-import { Flex, Row, StyleProvider, ThemePicker } from "vcc-ui";
-import "../public/css/styles.css";
-import carStyles from "@styles/cars.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import carStyles from "@styles/cars.module.css";
+import "@styles/styles.css";
+import React, { useEffect, useState } from "react";
+import { StyleProvider, ThemePicker } from "vcc-ui";
 
 interface CarItem {
   id: string;
@@ -31,7 +31,7 @@ function HomePage() {
       <StyleProvider>
         <ThemePicker variant="light">
           <DefaultLayout>
-            <Carousel>
+            <Carousel items={cars}>
               {cars.map((car: CarItem, index: number) => (
                 <Carousel.Item key={car.id}>
                   <h1 className={carStyles.sub_title}>{car.bodyType}</h1>
